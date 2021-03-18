@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">ShopApps</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="login_text_1">New user? </string>
+    <string name="login_text_2"> Register Now</string>
+    <string name="register">Register</string>
+    <string name="confirmation_password">Confirmation Password</string>
+    <string name="email_not_valid">Email not valid</string>
+    <string name="password_confirmation_not_same">Password confirmation not same</string>
+    <string name="email_empty">Email empty</string>
+    <string name="password_empty">Password empty</string>
+    <string name="internet_error">Please check your internet connection or try again later.</string>
+    <string name="email_password_wrong">Email or password is wrong.</string>
+    <string name="email_taken">The mail has already been taken.</string>
+    <string name="search_items">Search Items</string>
+    <string name="dicover_items">Discover Items</string>
+    <string name="ic_search">ic_search</string>
+
+    <string name="search_title">Search Items</string>
+    <string name="search_message">Lets search items! :)</string>
+    <string name="search_not_found_title">Items not found</string>
+    <string name="search_not_found_message">Cannot find the item you are looking for :(</string>
+    <string name="error_title">An Error Occurred</string>
+    <string name="error_message">Please check internet connection or try again later.</string>
+    <string name="retry">Retry</string>
+
+    <string name="login_title">Session Expired</string>
+    <string name="login_message">Please login again to access the items.</string>
+    <string name="nama_barang">Nama Barang</string>
+    <string name="kode_barang">Kode Barang</string>
+    <string name="jumlah_barang">Jumlah Barang</string>
+    <string name="harga_barang">Harga Barang</string>
+    <string name="satuan_barang">Satuan barang</string>
+    <string name="status_barang">Status Barang</string>
+    <string name="save">Save</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="new_item">New Item</string>
 </resources>

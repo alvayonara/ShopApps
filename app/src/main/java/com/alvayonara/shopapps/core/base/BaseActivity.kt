@@ -1,7 +1,10 @@
 package com.alvayonara.shopapps.core.base
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
@@ -35,7 +38,18 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected fun setLog(message: String) = Timber.e(message)
 
+    protected fun hideKeyboard(act: Activity) {
+        val view = act.currentFocus
+        if (view != null) {
+            val inputMethodManager =
+                act.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+    }
+
     protected open fun releaseData() {}
+    protected open fun setupFormValidation() {}
+    protected open fun setupDialog() {}
     protected open fun setupView() {}
     protected open fun setupRecyclerView() {}
     protected open fun subscribeViewModel() {}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_close" />
+
+            <TextView
+                android:id="@+id/tv_item_header"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white"
+                tools:text="Edit Item" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/spacing_xsmall"
+                android:paddingRight="@dimen/spacing_xsmall"
+                android:text="@string/save"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <EditText
+                android:id="@+id/edt_nama_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nama_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"
+                android:layout_below="@id/edt_nama_barang" />
+
+            <EditText
+                android:id="@+id/edt_kode_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_1"
+                android:hint="@string/kode_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"
+                android:layout_below="@id/edt_kode_barang" />
+
+            <EditText
+                android:id="@+id/edt_jumlah_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_2"
+                android:hint="@string/jumlah_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"
+                android:layout_below="@id/edt_jumlah_barang" />
+
+            <EditText
+                android:id="@+id/edt_harga_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_3"
+                android:hint="@string/harga_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"
+                android:layout_below="@id/edt_harga_barang" />
+
+            <EditText
+                android:id="@+id/edt_satuan_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_4"
+                android:hint="@string/satuan_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <View
+                android:id="@+id/view_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"
+                android:layout_below="@id/edt_satuan_barang" />
+
+            <EditText
+                android:id="@+id/edt_status_barang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_5"
+                android:hint="@string/status_barang"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColorHint="@color/grey_40" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/lime_600"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
